@@ -38,10 +38,10 @@ public protocol TarsStruct: DeepCopyable {
   static var maxStringLength: Int { get }
 
   /// 写入到输出流
-  func writeTo(_ os: TarsOutputStream) throws
+  func writeTo(_ outputStream: TarsOutputStream) throws
 
   /// 从输入流读取
-  func readFrom(_ is: TarsInputStream) throws
+  func readFrom(_ inputStream: TarsInputStream) throws
 
   /// 将结构转换为字符串表示
   func displayAsString(_ buffer: inout String, level: Int)

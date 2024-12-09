@@ -41,14 +41,14 @@ public class TarsDisplayer {
   }
 
   @discardableResult
-  func displayBool(_ value: Bool, _ fieldName: String?) -> TarsDisplayer {
+  public func displayBool(_ value: Bool, _ fieldName: String?) -> TarsDisplayer {
     printSpace(fieldName)
     sb += value ? "T\n" : "F\n"
     return self
   }
 
   @discardableResult
-  func displayInt(_ value: Int, _ fieldName: String?) -> TarsDisplayer {
+  public func displayInt(_ value: Int, _ fieldName: String?) -> TarsDisplayer {
     printSpace(fieldName)
     sb += "\(value)\n"
     return self
@@ -62,7 +62,7 @@ public class TarsDisplayer {
   }
 
   @discardableResult
-  func displayString(_ value: String?, _ fieldName: String?) -> TarsDisplayer {
+  public func displayString(_ value: String?, _ fieldName: String?) -> TarsDisplayer {
     printSpace(fieldName)
     if let value {
       sb += "\(value)\n"
@@ -73,7 +73,7 @@ public class TarsDisplayer {
   }
 
   @discardableResult
-  func displayData(_ value: Uint8List?, _ fieldName: String?) -> TarsDisplayer {
+    func displayData(_ value: Uint8List?, _ fieldName: String?) -> TarsDisplayer {
     printSpace(fieldName)
     guard let value else {
       sb += "null\n"
