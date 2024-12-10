@@ -9,7 +9,7 @@ import Foundation
 //
 
 final class RequestPacket: TarsStruct {
-  private nonisolated(unsafe) static var cacheBuffer = Uint8List([0x0])
+  private static var cacheBuffer = Uint8List([0x0])
   private static let cacheContext = ["": ""]
   private static let cacheStatus = ["": ""]
 
