@@ -24,7 +24,7 @@ public class TarsInputStream {
   var reader: BinaryReader!
   var serverEncoding = "UTF-8"
 
-  init(_ data: [UInt8] = [], pos: Int = 0) {
+  public init(_ data: [UInt8] = [], pos: Int = 0) {
     if !data.isEmpty {
       self.reader = BinaryReader(data)
       reader.position = pos
@@ -286,7 +286,7 @@ extension TarsInputStream {
 
   /// 读取byte[]
   /// 对应Tars类型：SimpleList
-  func readBytes(_ tag: Int, required: Bool) throws -> Uint8List {
+  public func readBytes(_ tag: Int, required: Bool) throws -> Uint8List {
     var bytes: Uint8List = []
 
     if skipToTag(tag) {

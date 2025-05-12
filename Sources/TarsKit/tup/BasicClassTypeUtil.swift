@@ -7,7 +7,7 @@
 import Foundation
 
 typealias BigInt = Int64
-typealias Uint8List = [UInt8]
+public typealias Uint8List = [UInt8]
 
 // MARK: - BasicClassTypeUtil
 

@@ -4,9 +4,9 @@
 //  Created by littleTurnip on 12/4/24.
 //
 
-class BinaryWriter {
-  var buffer: Uint8List
-  var position = 0
+public class BinaryWriter {
+  public var buffer: Uint8List
+  public var position = 0
 
   var length: Int { buffer.count }
 

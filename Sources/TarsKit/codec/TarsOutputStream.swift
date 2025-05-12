@@ -9,10 +9,10 @@ import Foundation
 //
 
 public class TarsOutputStream {
-  var writer: BinaryWriter
+  public var writer: BinaryWriter
   var sServerEncoding = "UTF-8"
 
-  init(buffer: Uint8List = []) {
+  public init(buffer: Uint8List = []) {
     self.writer = BinaryWriter(buffer: buffer)
   }
 
@@ -163,7 +163,7 @@ public class TarsOutputStream {
     try writeHead(.structEnd, tag: 0)
   }
 
-  func toUint8List() -> Uint8List {
+  public func toUint8List() -> Uint8List {
     writer.buffer
   }
 
